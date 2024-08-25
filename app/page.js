@@ -1,113 +1,112 @@
 import Image from "next/image";
+import seatingChart from "../public/seating-chart.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <main>
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <h1 className="text-3xl font-bold">Secret Number Concert</h1>
+          <ul className="flex space-x-6">
+            <li>
+              <a href="#overview" className="hover:text-gray-400">
+                Overview
+              </a>
+            </li>
+            <li>
+              <a href="#seating" className="hover:text-gray-400">
+                Seating Layout
+              </a>
+            </li>
+            <li>
+              <a href="#benefits" className="hover:text-gray-400">
+                Fan Benefits
+              </a>
+            </li>
+            <li>
+              <a href="#tickets" className="hover:text-gray-400">
+                Tickets
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Header Section */}
+      <header className="bg-black py-6 mt-16">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-extrabold text-white">
+            Secret Number Concert
+          </h1>
+          <p className="mt-4 text-xl text-white">Experience the magic live!</p>
+        </div>
+      </header>
+
+      {/* Overview Section */}
+      <section id="overview" className="py-12 bg-background">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-4xl font-semibold mb-6">Concert Overview</h2>
+          <p className="text-lg leading-relaxed">
+            Join us for an unforgettable night with Secret Number! Enjoy
+            exclusive performances, interactive sessions, and create memories
+            that will last a lifetime.
+          </p>
+        </div>
+      </section>
+
+      {/* Seating Layout Section */}
+      <section id="seating" className="py-12 bg-gray-800">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-4xl font-semibold mb-6 text-white">
+            Seating Layout
+          </h2>
+          <div className="flex justify-center">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={seatingChart}
+              alt="Seating Layout"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-custom-dark"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Fan Benefits Section */}
+      <section id="benefits" className="py-12 bg-background">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-4xl font-semibold mb-6">Fan Benefits</h2>
+          <ul className="text-lg leading-relaxed space-y-4">
+            <li>🎤 Exclusive Meet & Greet Session</li>
+            <li>🎁 Limited Edition Merchandise</li>
+            <li>📸 Professional Photo Opportunities</li>
+            <li>🎶 Early Access to Soundcheck</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tickets" className="py-12 bg-background">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-4">Get Your Tickets Now!</h2>
+          <a
+            href="https://tiptip.id/event/eaa6add0-3daf-4683-81ed-44d9e60bb78a?&show_options=true"
+            className="btn-primary"
+          >
+            Buy Tickets
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      {/* Footer Section */}
+      <footer className="bg-black py-6">
+        <div className="container mx-auto text-center">
+          <p className="text-white">
+            &copy; {new Date().getFullYear()} Secret Number. All rights
+            reserved.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+      </footer>
     </main>
   );
 }

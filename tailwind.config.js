@@ -1,18 +1,39 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#1d4ed8", // Example primary color (replace with actual color from the reference site)
+        secondary: "#ef4444", // Example secondary color (replace with actual color)
+        accent: "#10b981", // Example accent color (replace with actual color)
+        background: "#f3f4f6", // Example background color (replace with actual color)
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Example font (replace with actual font)
+        serif: ["Georgia", "serif"],
+        mono: ["Menlo", "monospace"],
+      },
+      spacing: {
+        128: "32rem", // Custom spacing values
+        144: "36rem",
+      },
+      boxShadow: {
+        "custom-light": "0 4px 6px rgba(0, 0, 0, 0.1)",
+        "custom-dark": "0 10px 15px rgba(0, 0, 0, 0.2)",
+      },
+      fontSize: {
+        xxs: "0.65rem",
+        xxl: "2rem",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
