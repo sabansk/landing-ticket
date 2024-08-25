@@ -1,6 +1,6 @@
 import Image from "next/image";
 import seatingChart from "../public/seating-chart.png";
-
+import "../styles/globals.css";
 export default function Home() {
   return (
     <main>
@@ -44,7 +44,7 @@ export default function Home() {
       </header>
 
       {/* Overview Section */}
-      <section id="overview" className="py-12 bg-background">
+      <section id="overview" className="py-12 bg-black">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-semibold mb-6">Concert Overview</h2>
           <p className="text-lg leading-relaxed">
