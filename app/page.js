@@ -36,7 +36,7 @@ export default function Home() {
       {/* Header Section */}
       <header className="bg-black py-6 mt-16">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-extrabold text-white">
+          <h1 className="text-5xl text-white font-boromir">
             Secret Number Concert
           </h1>
           <p className="mt-4 text-xl text-white">Experience the magic live!</p>
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Fan Benefits Section */}
-      <section id="benefits" className="py-12 bg-background">
+      <section id="benefits" className="py-12 bg-purple-500">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-semibold mb-6">Fan Benefits</h2>
           <ul className="text-lg leading-relaxed space-y-4">
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tickets" className="py-12 bg-background">
+      <section id="tickets" className="py-12 bg-purple-600 relative">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">Get Your Tickets Now!</h2>
           <a
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-black py-6">
+      <footer className="bg-black py-6 relative">
         <div className="container mx-auto text-center">
           <p className="text-white">
             &copy; {new Date().getFullYear()} Secret Number. All rights

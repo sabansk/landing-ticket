@@ -17,6 +17,7 @@ module.exports = {
         sans: ["Inter", "sans-serif"], // Example font (replace with actual font)
         serif: ["Georgia", "serif"],
         mono: ["Menlo", "monospace"],
+        boromir: ["Boromir Caps", "sans-serif"],
       },
       spacing: {
         128: "32rem", // Custom spacing values
@@ -33,8 +34,8 @@ module.exports = {
     },
   },
   plugins: [
-    //require("@tailwindcss/forms"),
-    //require("@tailwindcss/typography"),
-    //require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 };
